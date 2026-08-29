@@ -1,0 +1,55 @@
+{
+  "name": "reusable-visual-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./types": { "types": "./dist/types/index.d.ts", "import": "./dist/types/index.js" },
+    "./core": { "types": "./dist/core/index.d.ts", "import": "./dist/core/index.js" },
+    "./modules/background": {
+      "types": "./dist/modules/background/index.d.ts",
+      "import": "./dist/modules/background/index.js"
+    },
+    "./modules/text": { "types": "./dist/modules/text/index.d.ts", "import": "./dist/modules/text/index.js" },
+    "./modules/overlay": {
+      "types": "./dist/modules/overlay/index.d.ts",
+      "import": "./dist/modules/overlay/index.js"
+    },
+    "./modules/timing": {
+      "types": "./dist/modules/timing/index.d.ts",
+      "import": "./dist/modules/timing/index.js"
+    },
+    "./modules/camera": {
+      "types": "./dist/modules/camera/index.d.ts",
+      "import": "./dist/modules/camera/index.js"
+    },
+    "./modules/interaction": {
+      "types": "./dist/modules/interaction/index.d.ts",
+      "import": "./dist/modules/interaction/index.js"
+    },
+    "./adapters": { "types": "./dist/adapters/index.d.ts", "import": "./dist/adapters/index.js" }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.8.3"
+  }
+}
