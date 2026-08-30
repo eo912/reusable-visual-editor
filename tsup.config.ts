@@ -11,6 +11,7 @@ export default defineConfig({
     "modules/timing/index": "src/modules/timing/index.ts",
     "modules/camera/index": "src/modules/camera/index.ts",
     "modules/interaction/index": "src/modules/interaction/index.ts",
+    "modules/asset-inserter/index": "src/modules/asset-inserter/index.ts",
     "adapters/index": "src/adapters/index.ts",
   },
   format: ["esm"],

@@ -1,0 +1,7 @@
+{
+  "id": "edit-dock",
+  "name": "Edit Dock",
+  "description": "Editor visivo DEV headless per componenti React (transform, testo, overlay, timing, camera, interaction). Il progetto host importa il pacchetto npm, implementa un proprio EditorAdapter (scene, layout, elementi editabili, assetSources, persistenza) e monta EditorProvider attorno alla propria app. Edit Dock non fornisce UI propria ne' scrive sul filesystem del progetto: lo stato di editing viene persistito via PersistenceBackend (localStorage namespaced di default) nel browser dell'utente.",
+  "integrationKind": "host-library",
+  "capabilities": ["transform", "text", "overlay", "timing", "camera", "interaction", "presets-json"]
+}

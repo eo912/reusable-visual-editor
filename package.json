@@ -31,6 +31,10 @@
       "types": "./dist/modules/interaction/index.d.ts",
       "import": "./dist/modules/interaction/index.js"
     },
+    "./modules/asset-inserter": {
+      "types": "./dist/modules/asset-inserter/index.d.ts",
+      "import": "./dist/modules/asset-inserter/index.js"
+    },
     "./adapters": { "types": "./dist/adapters/index.d.ts", "import": "./dist/adapters/index.js" }
   },
   "files": ["dist"],
