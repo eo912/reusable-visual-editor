@@ -25,7 +25,7 @@ Il pacchetto resta headless e non impone alcuna UI: rispettare questo principio 
 ```
 src/
   types/        tipi condivisi (Transform, LayoutKey, Timing, EditorAdapter, ...)
-  core/         EditorProvider, useEditableTransform, useDraggable, presets, persistence
+  core/         EditorProvider, useEditableTransform, useDraggable/useResizable/useRotatable, presets, persistence
   modules/
     background/ stub minimo
     text/       stub minimo
