@@ -16,7 +16,12 @@ export default defineConfig({
   },
   format: ["esm"],
   dts: true,
-  splitting: false,
+  // true: i moduli interni condivisi (es. il React Context di EditorProvider,
+  // usato sia da "core" sia da "modules/overlay") finiscono in un chunk
+  // comune invece di essere duplicati in ogni entry point — altrimenti due
+  // subpath che condividono un modulo interno ottengono due istanze diverse
+  // dello stesso Context, e useEditorContext() fallisce a runtime.
+  splitting: true,
   sourcemap: true,
   clean: true,
   external: ["react", "react-dom"],
