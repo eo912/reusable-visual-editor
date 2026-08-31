@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { EditorAdapter, LayoutKey } from "../types";
 
 export type EditorContextValue<TAdapter extends EditorAdapter = EditorAdapter> = {
@@ -26,6 +26,15 @@ export function EditorProvider<TAdapter extends EditorAdapter>({
 }) {
   const [editing, setEditingState] = useState(false);
   const [layout, setLayout] = useState<LayoutKey>(defaultLayout);
+
+  // defaultLayout e' anche un valore live (es. il progetto host lo ricalcola
+  // al resize della finestra): se cambia dopo il primo render, risincronizza
+  // lo stato interno, altrimenti chi persiste dati per-layout (vedi
+  // useOverlayInstances) continuerebbe a scrivere sotto il breakpoint ormai
+  // superato.
+  useEffect(() => {
+    setLayout(defaultLayout);
+  }, [defaultLayout]);
 
   const setEditing = (value: boolean) => {
     if (!editingEnabled) return;
