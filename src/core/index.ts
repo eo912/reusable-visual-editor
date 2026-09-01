@@ -2,6 +2,7 @@ export * from "./EditorProvider";
 export * from "./useSelection";
 export * from "./useDraggable";
 export * from "./useResizable";
+export * from "./useResizableBox";
 export * from "./useRotatable";
 export * from "./useEditableTransform";
 export * from "./eventBus";
