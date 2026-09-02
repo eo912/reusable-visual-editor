@@ -1,8 +1,8 @@
 {
-  "name": "reusable-visual-editor",
+  "name": "@ed912dev/reusable-visual-editor",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "publishConfig": { "access": "public" },
   "sideEffects": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
